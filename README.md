@@ -23,3 +23,22 @@ The "Product" and "Product_Category" entities are related through the following 
 - This relationship represents a 0-1 association, indicating that each product may or may not belong to a product category.
 - The foreign key constraint ensures data integrity by requiring valid values in the `category_id` column of the "Product" table, referencing existing values in the `id` column of the "Product_Category" table.
 
+## Ensuring Valid Category Assignment for Products - Second Answer
+
+To ensure that each product in the "Product" table has a valid category assigned, a foreign key constraint has been implemented between the "Product" and "Product_Category" tables.
+
+### Foreign Key Constraint:
+
+- **Product Table:**
+  - Attribute: `category_id` (Foreign Key)
+  - Type: Integer
+  - References: "Product_Category" table's primary key (`id`)
+  
+```sql
+CREATE TABLE Product (
+    id INT PRIMARY KEY,
+    name VARCHAR,
+    -- other columns...
+    category_id INT,
+    FOREIGN KEY (category_id) REFERENCES Product_Category(id)
+);
