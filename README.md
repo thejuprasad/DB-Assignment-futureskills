@@ -34,30 +34,11 @@ To ensure that each product in the "Product" table has a valid category assigned
   - Type: Integer
   - References: "Product_Category" table's primary key (`id`)
   
-```sql
-CREATE TABLE Product (
-    id INT PRIMARY KEY,
-    name VARCHAR,
-    -- other columns...
-    category_id INT,
-    FOREIGN KEY (category_id) REFERENCES Product_Category(id)
-);
-
-sql```
-
-## Product_Category Table
-
-- **Primary Key:** `id` (Bolded)
-- **Type:** Integer
-
-### Relationship Details with "Product" Table:
-
-The foreign key constraint establishes a critical relationship between the "Product" and "Product_Category" tables, ensuring data integrity and valid category assignments.
-
-- The "Product" table's `category_id` is designated as a foreign key, creating a direct association with the primary key `id` in the "Product_Category" table.
-
-- This constraint guarantees that any value entered into the `category_id` column in the "Product" table must correspond to a valid entry in the `id` column of the "Product_Category" table.
-
-- In case of attempts to insert or update a product with an invalid `category_id`, the database will raise a foreign key violation error. This mechanism is crucial for preventing inconsistent data and maintaining the integrity of the relationships between products and their respective categories.
-
-By enforcing this foreign key constraint, the system ensures that each product is linked to a valid category, contributing to a robust and reliable database structure.
+  ```sql
+  CREATE TABLE Product (
+      id INT PRIMARY KEY,
+      name VARCHAR,
+      -- other columns...
+      category_id INT,
+      FOREIGN KEY (category_id) REFERENCES Product_Category(id)
+  );
