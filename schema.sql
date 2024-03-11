@@ -1,4 +1,4 @@
--- Create Product_Category table
+-- Creating Product_Category table
 CREATE TABLE Product_Category (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE Product_Category (
     deleted_at TIMESTAMP
 );
 
--- Create Product_Inventory table
+-- Creating Product_Inventory table
 CREATE TABLE Product_Inventory (
     id INT AUTO_INCREMENT PRIMARY KEY,
     quantity INT NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE Product_Inventory (
     deleted_at TIMESTAMP
 );
 
--- Create Discount table
+-- Creating Discount table
 CREATE TABLE Discount (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Discount (
     deleted_at TIMESTAMP
 );
 
--- Create Product table with foreign key references
+-- Creating Product table with foreign key references
 CREATE TABLE Product (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
