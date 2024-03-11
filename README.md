@@ -43,6 +43,7 @@ CREATE TABLE Product (
     FOREIGN KEY (category_id) REFERENCES Product_Category(id)
 );
 
+
 ## Product_Category Table
 
 - **Primary Key:** `id` (Bolded)
