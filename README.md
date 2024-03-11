@@ -1,6 +1,4 @@
-# Future-skills-assignment
-
-# Database Schema README
+# Database Schema Answers
 
 ## Overview
 
