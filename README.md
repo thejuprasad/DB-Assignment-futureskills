@@ -41,7 +41,7 @@ CREATE TABLE Product (
     -- other columns...
     category_id INT,
     FOREIGN KEY (category_id) REFERENCES Product_Category(id)
-);
+);```
 
 
 ## Product_Category Table
